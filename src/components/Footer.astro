@@ -36,22 +36,12 @@ const showNewsletter = !!import.meta.env.NEWSLETTER_PROVIDER;
         ))
     }
 
-    {
-      showNewsletter && (
-        <div class="flex-col content-end items-end justify-end gap-2 py-0 pt-8 sm:ml-auto sm:flex sm:max-w-md sm:pt-0 sm:text-right">
-          <div
-            class="richtext dense no-lead balance text-xl leading-none opacity-80"
-            set:html={marked.parse(about.data.newsletter_text)}
-          />
-          <Newsletter client:visible />
-        </div>
-      )
-    }
+   
   </div>
   <div class="container-xl mb-4 flex items-end justify-between gap-4">
     <div class="grid grid-cols-1 gap-4">
       <a rel="noopener noreferrer" href="#" aria-label={t("back_to_home")}>
-        <Icon name="logo-footer" class="h-6" />
+        <Icon name="logo" class="h-12" fill="white" />
       </a>
 
       {
@@ -80,7 +70,7 @@ const showNewsletter = !!import.meta.env.NEWSLETTER_PROVIDER;
       }
       <div class="mt-auto flex gap-2 pt-4 text-xs opacity-70">
         <span>&copy;{today.getFullYear()}</span>
-        <span> {about.data.sitename}</span>
+        <span> Maglev AI, Inc. </span>
       </div>
     </div>
 
